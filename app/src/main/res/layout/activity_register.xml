@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".LoginAndRegister.RegisterActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:padding="4dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:hint="User Name"
+        android:background="@drawable/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:id="@+id/register_user_name"
+        android:focusable="true"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:hint="Password"
+        android:background="@drawable/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:inputType="textPassword"
+        android:id="@+id/register_password"
+        android:focusable="true"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:hint="Re-Password"
+        android:background="@drawable/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:inputType="textPassword"
+        android:id="@+id/register_re_password"
+        android:focusable="true"/>
+
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Signup"
+        android:id="@+id/register_button"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

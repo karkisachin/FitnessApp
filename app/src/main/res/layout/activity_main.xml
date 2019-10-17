@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer"
+    android:background="@color/light">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.smarteist.autoimageslider.SliderLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/imageSlider"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_margin="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daily Food Tracking"
+                            android:textSize="20dp"
+                            android:textColor="@color/black"
+                            android:layout_margin="10dp"
+                            android:padding="1dp"
+                            android:layout_weight="0.9"/>
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/calorie_button"
+                            android:layout_gravity="right|center"
+                            android:layout_weight="0.1"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/calorie_img"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/light"/>
+
+                    <!-- water -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Water "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:gravity="end|bottom"
+                                android:id="@+id/food_tracker_water_editText"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:hint="1 glass : 250ml"
+                                android:textSize="12dp"
+                                android:textColorHint="@color/light"
+                                android:id="@+id/food_tracker_water_Text"
+                                android:layout_weight="0.4"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="end"
+                                android:layout_marginRight="6dp"
+                                android:layout_marginLeft="6dp"
+                                android:padding="2dp"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@color/light"/>
+
+                        </LinearLayout>
+
+                    <!-- Fruit -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fruits "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowColor="@color/colorPrimaryDark"
+                                app:ms_floatingLabelColor="@color/light"
+                                app:ms_hint="Please Choose"
+                                app:ms_hintColor="@color/light"
+                                app:ms_multiline="false"
+                                android:id="@+id/main_activity_material_spinner"
+                                android:layout_weight="0.3"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:textColorHint="@color/light"
+                                android:id="@+id/food_tracker_breakfast_editText"
+                                android:layout_weight="0.7"
+                                android:gravity="bottom|end"
+                                android:layout_gravity="bottom"
+                                android:inputType="number"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="1 mango: 70 cal"
+                            android:textSize="12dp"
+                            android:textColorHint="@color/light"
+                            android:id="@+id/food_tracker_breakfast_Text"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/light"/>
+
+                    </LinearLayout>
+                    <!-- Vegetable -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vegetables "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowColor="@color/colorPrimaryDark"
+                                app:ms_floatingLabelColor="@color/light"
+                                app:ms_hint="Please Choose"
+                                app:ms_hintColor="@color/light"
+                                app:ms_multiline="false"
+                                android:id="@+id/main_activity_material_spinner2"
+                                android:layout_weight="0.3"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:gravity="end|bottom"
+                                android:id="@+id/food_tracker_breakfast_editText2"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="times"
+                            android:textSize="12dp"
+                            android:textColorHint="@color/light"
+                            android:id="@+id/food_tracker_breakfast_Text2"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/light"/>
+
+                    </LinearLayout>
+
+                    <!-- Meat -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Meat "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowColor="@color/colorPrimaryDark"
+                                app:ms_floatingLabelColor="@color/light"
+                                app:ms_hint="Please Choose"
+                                app:ms_hintColor="@color/light"
+                                app:ms_multiline="false"
+                                android:id="@+id/main_activity_material_spinner3"
+                                android:layout_weight="0.3"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:gravity="end|bottom"
+                                android:id="@+id/food_tracker_breakfast_editText3"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="times"
+                            android:textSize="12dp"
+                            android:textColorHint="@color/light"
+                            android:id="@+id/food_tracker_breakfast_Text3"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/light"/>
+
+                    </LinearLayout>
+
+                    <!-- Tea/Coffee -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tea/Coffee/Drinks "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowColor="@color/colorPrimaryDark"
+                                app:ms_floatingLabelColor="@color/light"
+                                app:ms_hint="Please Choose"
+                                app:ms_hintColor="@color/light"
+                                app:ms_multiline="false"
+                                android:id="@+id/main_activity_material_spinner4"
+                                android:layout_weight="0.3"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:gravity="end|bottom"
+                                android:id="@+id/food_tracker_breakfast_editText4"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="times"
+                            android:textSize="12dp"
+                            android:textColorHint="@color/light"
+                            android:id="@+id/food_tracker_breakfast_Text4"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/light"/>
+
+                    </LinearLayout>
+
+                    <!-- Juice -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Juice "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowColor="@color/colorPrimaryDark"
+                                app:ms_floatingLabelColor="@color/light"
+                                app:ms_hint="Please Choose"
+                                app:ms_hintColor="@color/light"
+                                app:ms_multiline="false"
+                                android:id="@+id/main_activity_material_spinner5"
+                                android:layout_weight="0.3"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:gravity="end|bottom"
+                                android:id="@+id/food_tracker_breakfast_editText5"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="times"
+                            android:textSize="12dp"
+                            android:textColorHint="@color/light"
+                            android:id="@+id/food_tracker_breakfast_Text5"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/light"/>
+
+                    </LinearLayout>
+
+                    <!-- Other -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="6dp"
+                        android:padding="2dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Others "
+                            android:textColor="@color/black"
+                            android:textSize="16dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="6dp"
+                            android:weightSum="1">
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowColor="@color/colorPrimaryDark"
+                                app:ms_floatingLabelColor="@color/light"
+                                app:ms_hint="Please Choose"
+                                app:ms_hintColor="@color/light"
+                                app:ms_multiline="false"
+                                android:id="@+id/main_activity_material_spinner6"
+                                android:layout_weight="0.3"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:hint="numbers"
+                                android:gravity="end|bottom"
+                                android:id="@+id/food_tracker_breakfast_editText6"
+                                android:layout_weight="0.7"
+                                android:layout_gravity="center_vertical"
+                                android:inputType="number"/>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="times"
+                            android:textSize="12dp"
+                            android:textColorHint="@color/light"
+                            android:id="@+id/food_tracker_breakfast_Text6"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:padding="2dp"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/light"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:hint="Total Calorie : "
+                        android:textColorHint="@color/light"
+                        android:id="@+id/food_tracker_Text"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="bottom"
+                        android:layout_margin="6dp"
+                        android:padding="2dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@color/light"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Done"
+                        android:layout_margin="6dp"
+                        android:background="@drawable/button_bg"
+                        android:id="@+id/food_tracker_done_editText"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/menu"
+        android:id="@+id/navigation">
+
+    </android.support.design.widget.NavigationView>
+
+
+
+</android.support.v4.widget.DrawerLayout>

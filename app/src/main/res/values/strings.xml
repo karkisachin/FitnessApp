@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fitness</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="api_key">pk.eyJ1Ijoic3VtYW5teW9uIiwiYSI6ImNqdjYyMnN6dzAwbnU0ZG1qZjl2NGMzb2cifQ.16smYhpSH7Tq47o78vP5RQ</string>
+</resources>
